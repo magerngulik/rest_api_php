@@ -24,10 +24,6 @@
         }else{
             respone(400,array('message'=>'email sudah terdaftar!'));
         }
-
-
-
-
     }
 
     mysqli_close($db_connect);
