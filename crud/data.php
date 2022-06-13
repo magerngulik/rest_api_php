@@ -2,7 +2,7 @@
 
     require_once('helper.php');
 
-    $query = "SELECT * FROM notes";
+    $query = "SELECT * FROM notes ORDER BY id DESC";
     $sql = mysqli_query($db_connect, $query);
 
     if ($sql) 
@@ -13,10 +13,8 @@
             array_push($result, array(
                 'id' => $row['id'],
                 'note' => $row['note'],
-         
             ));
         }
-
         echo json_encode(array('result'=>$result));
         
     }
